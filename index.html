@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Татьяна Владимировна — Репетитор для начальной школы</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#FFFBCC; /* мягкий жёлтый */
+      --bg2:#FFE1F0; /* розовый */
+      --accent1:#FF8A65; /* коралловый */
+      --accent2:#FFD54F; /* солнечный */
+      --card:#ffffffee;
+      --radius:16px;
+      color:#183044;
+      font-family:'Rubik',system-ui,-apple-system,"Segoe UI",Roboto;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(120deg,var(--bg1),var(--bg2));min-height:100vh;padding:28px}
+    .wrap{max-width:1100px;margin:0 auto}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+    .logo{display:flex;gap:14px;align-items:center}
+    .logo-badge{width:68px;height:68px;border-radius:16px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:grid;place-items:center;color:white;font-weight:800;font-family:'Baloo 2',cursive}
+    nav a{margin-left:10px;text-decoration:none;color:inherit;font-weight:600}
+
+    main{display:grid;grid-template-columns:1fr 340px;gap:22px;align-items:start}
+
+    .hero{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(25,25,60,0.06)}
+    .hero-top{display:flex;gap:18px;align-items:center}
+    .photo{width:140px;height:140px;border-radius:14px;overflow:hidden;flex-shrink:0;background:#fff;display:grid;place-items:center}
+    .photo img{width:100%;height:100%;object-fit:cover}
+    h1{margin:0;font-size:26px}
+    p.lead{margin:6px 0 0;color:#274}
+
+    .badges{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    .badge{background:linear-gradient(90deg,#fff,#fff0);padding:8px 12px;border-radius:999px;font-weight:700}
+
+    .cta{margin-top:14px;display:flex;gap:10px}
+    .btn{padding:12px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:700}
+    .primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff}
+    .ghost{background:transparent;border:2px dashed rgba(25,25,60,0.06)}
+
+    /* Sidebar */
+    .side{position:sticky;top:28px}
+    .card{background:var(--card);padding:14px;border-radius:12px;margin-bottom:14px;box-shadow:0 6px 20px rgba(25,25,60,0.05)}
+    .price{font-weight:800;font-size:20px;color:#213}
+    .small{font-size:13px;color:#325}
+
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .service{background:linear-gradient(180deg,#fff,#fff8);padding:10px;border-radius:10px;font-weight:600}
+
+    /* About */
+    .about{margin-top:16px}
+
+    /* Contact form */
+    form{display:grid;gap:10px}
+    input,textarea,select{padding:10px;border-radius:8px;border:1px solid rgba(25,25,60,0.06);font-size:14px}
+    textarea{min-height:100px}
+
+    footer{text-align:center;margin-top:20px;color:#233}
+
+    @media (max-width:980px){
+      main{grid-template-columns:1fr}
+      .side{position:static}
+      .photo{width:120px;height:120px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="logo-badge">ТВ</div>
+        <div>
+          <div style="font-weight:800">Татьяна Владимировна</div>
+          <div style="font-size:13px;color:#234">Репетитор по русскому языку и математике (начальная школа)</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">О себе</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-top">
+          <div class="photo">
+            <!-- Замените src на своё фото. См. комментарии в Canvas для инструкций -->
+            <img src="https://i.postimg.cc/gk39XZh2/Izobrazenie-Whats-App-2025-11-24-v-10-47-33-048dba4a.png" alt="Татьяна Владимировна" class="w-48 h-48 rounded-full object-cover border-4 border-pink-300 shadow-lg">
+          </div>
+
+          <div>
+            <h1>Здравствуйте! Я — Татьяна Владимировна</h1>
+            <p class="lead">Помогаю детям начальной школы полюбить русский язык и математику, сделать домашние задания понятными и интересными.</p>
+
+            <div class="badges">
+              <div class="badge">Для 1–4 классов</div>
+              <div class="badge">Индивидуальный подход</div>
+              <div class="badge">Уроки онлайн и офлайн</div>
+            </div>
+
+            <div class="cta">
+              <button class="btn primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Записаться — 1000 ₽ / 50 мин</button>
+              <button class="btn ghost" onclick="alert('Напишите удобное для вас время в форме контактов')">Написать</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="about">
+          <h3 id="about">О занятиях</h3>
+          <p>Уроки строятся на простых понятных объяснениях, игровом и практическом подходе: чтение, грамматика в играх, устные упражнения, разбор примеров по математике, тренировка навыков счёта и логики.</p>
+        </div>
+
+        <div id="services">
+          <h3 style="margin-top:12px">Услуги</h3>
+          <div class="services">
+            <div class="service">Русский язык — программа для 1–4 классов</div>
+            <div class="service">Математика — основы, задачи, логика</div>
+            <div class="service">Поддержка с домашним заданием</div>
+            <div class="service">Подготовка к проверочным работам</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side">
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div class="small">Стоимость</div>
+              <div class="price">1000 ₽ / 50 мин</div>
+            </div>
+            <div style="text-align:right">
+              <div class="small">Формат</div>
+              <div style="font-weight:800">Онлайн / Офлайн</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="font-weight:800;margin-bottom:8px">Контакты</div>
+          <div class="small">Email: tatyana@example.com</div>
+          <div class="small">Тел: +7 (999) 123‑45‑67</div>
+        </div>
+
+        <div class="card">
+          <div style="font-weight:800;margin-bottom:8px">График</div>
+          <div class="small">Будни: 15:00 — 20:00</div>
+          <div class="small">Выходные: по договорённости</div>
+        </div>
+      </aside>
+    </main>
+
+    <section class="hero" style="margin-top:16px" id="contact">
+      <h3 style="margin-top:0">Записаться / Написать</h3>
+      <form onsubmit="event.preventDefault(); sendForm();" id="contactForm">
+        <input id="name" placeholder="Ваше имя" required>
+        <input id="phone" placeholder="Телефон или email" required>
+        <select id="subject">
+          <option value="rus">Русский язык — 1 урок</option>
+          <option value="math">Математика — 1 урок</option>
+        </select>
+        <textarea id="msg" placeholder="Коротко о цели и удобном времени"></textarea>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button class="btn primary" type="submit">Отправить</button>
+          <div id="result" style="font-weight:700"></div>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div style="font-weight:700">Татьяна Владимировна — Репетитор для начальной школы</div>
+      <div style="font-size:13px">© <span id="year"></span></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function sendForm(){
+      const name = document.getElementById('name').value.trim();
+      const contact = document.getElementById('phone').value.trim();
+      const result = document.getElementById('result');
+      if(!name || !contact){
+        result.style.color='crimson';
+        result.textContent='Пожалуйста, заполните имя и контакт.';
+        return;
+      }
+      result.style.color='green';
+      result.textContent='Спасибо! Мы свяжемся с вами.';
+      setTimeout(()=>{document.getElementById('contactForm').reset(); result.textContent='';},2500);
+    }
+  </script>
+</body>
+</html>
